@@ -8,6 +8,12 @@ class Hotel{
     int no_of_rooms;
     int rating;
     float price;
+    int no_of_single_rooms;
+    int no_of_double_rooms;
+    int no_of_family_rooms;
+    float price_for_single_room;
+    float price_for_double_room;
+    float price_for_family_room;
 
     void Intro(){
         cout << "Name of hotel" << "    " << "Available rooms" << "    " << "Location" << "    " << "Price per night" << "     " << "Rating" << endl;
@@ -19,108 +25,17 @@ class Hotel{
         cout << "    " << endl;
     }
 
+    void hotel_info(){
+        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
+        cout << "            " << endl;
+        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
+        cout << "            " << endl;
+        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
+        cout << "            " << endl;
+    }
+
 
 };
-
- void hotel_one_info(){
-        int no_of_single_rooms = 5;
-        int no_of_double_rooms = 5;
-        int no_of_family_rooms = 5;
-        float price_for_single_room = 60.00;
-        float price_for_double_room = 70.00;
-        float price_for_family_room = 80.00;
-
-        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
-        cout << "            " << endl;
-        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
-        cout << "            " << endl;
-        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
-        cout << "            " << endl;
-    }
-
-    void hotel_two_info(){
-        int no_of_single_rooms = 10;
-        int no_of_double_rooms = 5;
-        int no_of_family_rooms = 5;
-        float price_for_single_room = 50.00;
-        float price_for_double_room = 65.00;
-        float price_for_family_room = 75.00;
-
-        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
-        cout << "            " << endl;
-        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
-        cout << "            " << endl;
-        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
-        cout << "            " << endl;
-    }
-
-    void hotel_three_info(){
-        int no_of_single_rooms = 10;
-        int no_of_double_rooms = 5;
-        int no_of_family_rooms = 5;
-        float price_for_single_room = 60.00;
-        float price_for_double_room = 70.00;
-        float price_for_family_room = 80.00;
-
-        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
-        cout << "            " << endl;
-        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
-        cout << "            " << endl;
-        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
-        cout << "            " << endl;
-    }
-
-    void hotel_four_info(){
-         int no_of_single_rooms = 15;
-        int no_of_double_rooms = 10;
-        int no_of_family_rooms = 10;
-        float price_for_single_room = 30.00;
-        float price_for_double_room = 40.00;
-        float price_for_family_room = 50.00;
-
-        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
-        cout << "            " << endl;
-        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
-        cout << "            " << endl;
-        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
-        cout << "            " << endl;
-    }
-
-    void hotel_five_info(){
-         int no_of_single_rooms = 10;
-        int no_of_double_rooms = 5;
-        int no_of_family_rooms = 5;
-        float price_for_single_room = 55.00;
-        float price_for_double_room = 65.00;
-        float price_for_family_room = 75.00;
-
-        cout << "Single rooms - " <<  no_of_single_rooms << " Price per night - " << price_for_single_room << endl;
-        cout << "            " << endl;
-        cout << "Double rooms - " <<  no_of_double_rooms << " Price per night - " << price_for_double_room << endl;
-        cout << "            " << endl;
-        cout << "Family rooms - " << no_of_family_rooms << " Price per night - " << price_for_family_room << endl;
-        cout << "            " << endl;
-    }
-
-   
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
 
 int main(){
 
@@ -132,6 +47,12 @@ int main(){
     h1.location = "Potsdam";
     h1.price = 80.00;
     h1.rating = 5;
+    h1.no_of_single_rooms = 5;
+    h1.no_of_double_rooms = 5;
+    h1.no_of_family_rooms = 5;
+    h1.price_for_single_room = 60;
+    h1.price_for_double_room = 70;
+    h1.price_for_family_room = 80;
 
     Hotel h2;
     h2.name = "Your Home  ";
@@ -139,6 +60,13 @@ int main(){
     h2.location = "Berlin ";
     h2.price = 75.00;
     h2.rating = 5;
+    h2.no_of_single_rooms = 10;
+    h2.no_of_double_rooms = 5;
+    h2.no_of_family_rooms = 5;
+    h2.price_for_single_room = 50;
+    h2.price_for_double_room = 65;
+    h2.price_for_family_room = 75;
+
 
     Hotel h3;
     h3.name = "Paradise   "; //11
@@ -146,6 +74,13 @@ int main(){
     h3.location = "Cottbus";
     h3.price = 80.00;
     h3.rating = 5;
+    h3.no_of_single_rooms = 10;
+    h3.no_of_double_rooms = 5;
+    h3.no_of_family_rooms = 5;
+    h3.price_for_single_room = 60;
+    h3.price_for_double_room = 70;
+    h3.price_for_family_room = 80;
+
 
     
     Hotel h4;
@@ -154,6 +89,13 @@ int main(){
     h4.location = "Hamburg"; //7
     h4.price = 50.00;
     h4.rating = 4.5;
+    h4.no_of_single_rooms = 15;
+    h4.no_of_double_rooms = 10;
+    h4.no_of_family_rooms = 10;
+    h4.price_for_single_room = 30;
+    h4.price_for_double_room = 40;
+    h4.price_for_family_room = 50;
+
 
     
     Hotel h5;
@@ -162,6 +104,14 @@ int main(){
     h5.location = "Leipzig";
     h5.price = 75.00;
     h5.rating = 5;
+    h5.no_of_single_rooms = 10;
+    h5.no_of_double_rooms = 5;
+    h5.no_of_family_rooms = 5;
+    h5.price_for_single_room = 55;
+    h5.price_for_double_room = 65;
+    h5.price_for_family_room = 75;
+
+
 
     h1.Intro();
     h1.hotelData();
@@ -171,9 +121,6 @@ int main(){
     h5.hotelData();
 
     string location;
-    int rating;
-    float price;
-    
     cout << "Enter the location (Berlin, Cottbus, Hamburg, Leipzig,  Potsdam ) - " << endl;
     cin >> location;
         if(location == "Berlin"){
@@ -181,7 +128,7 @@ int main(){
             h2.hotelData();
             cout << "Here is your hotel in Berlin!" << endl;
             cout << "     " << endl;
-            hotel_two_info();
+            h2.hotel_info();
         }
         
         else  if(location == "Potsdam"){
@@ -189,7 +136,7 @@ int main(){
             h1.hotelData();
             cout << "Here is your hotel in Potsdam!" << endl;
             cout << "     " << endl;
-            hotel_one_info();
+            h1.hotel_info();
         }
         
         else  if(location == "Hamburg"){
@@ -197,7 +144,7 @@ int main(){
             h4.hotelData();
             cout << "Here is your hotel in Hamburg!" << endl;
             cout << "     " << endl;
-            hotel_four_info();
+            h4.hotel_info();
         }
         
         else if(location == "Cottbus"){
@@ -205,15 +152,15 @@ int main(){
             h3.hotelData();
             cout << "Here is your hotel in Cottbus!" << endl;
             cout << "     " << endl;
-            hotel_three_info();
+            h3.hotel_info();
         }
         
         else if(location == "Leipzig"){
             h1.Intro();
-            h2.hotelData();
+            h5.hotelData();
             cout << "Here is your hotel in Leipzig!" << endl;
             cout << "     " << endl;
-            hotel_five_info();
+            h5.hotel_info();
         }
         
         else{
