@@ -7,13 +7,13 @@ class Hotel{
     string location;
     int no_of_rooms;
     int rating;
-    float price;
+    int price;
     int no_of_single_rooms;
     int no_of_double_rooms;
     int no_of_family_rooms;
-    float price_for_single_room;
-    float price_for_double_room;
-    float price_for_family_room;
+    int price_for_single_room;
+    int price_for_double_room;
+    int price_for_family_room;
 
     void Intro(){
         cout << "Name of hotel" << "    " << "Available rooms" << "    " << "Location" << "    " << "Price per night" << "     " << "Rating" << endl;
@@ -34,6 +34,34 @@ class Hotel{
         cout << "            " << endl;
     }
 
+    void payment_calculation(){
+        string user_room;
+        int no_of_user_room;
+
+        cout << "Which room do you prefer?(single or double or family)" << endl;
+        cin >> user_room;
+        cout << "                " << endl;
+
+        cout << "How many rooms are you going to reserve?" << endl;
+        cin >> no_of_user_room;
+        cout << "                " << endl;
+
+        int single_room_total_amount = no_of_user_room * price_for_single_room;
+        int double_room_total_amount = no_of_user_room * price_for_double_room;
+        int family_room_total_amount = no_of_user_room * price_for_family_room;
+
+        if(user_room == "single"){
+            cout << "Total amount - " << single_room_total_amount << " Euros " << endl;
+        } else if(user_room == "double"){
+            cout << "Total amount - " << double_room_total_amount << " Euros " << endl;
+        } else if(user_room == "family"){
+            cout << "Total amount - " << family_room_total_amount << " Euros " << endl;
+        } else{
+            cout << "Your input is invalid!" << endl;
+            cout << "                      " << endl;
+        }
+    }
+
 
 };
 
@@ -45,7 +73,7 @@ int main(){
     h1.name = "Hotel Relax";
     h1.no_of_rooms = 15;
     h1.location = "Potsdam";
-    h1.price = 80.00;
+    h1.price = 80;
     h1.rating = 5;
     h1.no_of_single_rooms = 5;
     h1.no_of_double_rooms = 5;
@@ -58,7 +86,7 @@ int main(){
     h2.name = "Your Home  ";
     h2.no_of_rooms = 20;
     h2.location = "Berlin ";
-    h2.price = 75.00;
+    h2.price = 75;
     h2.rating = 5;
     h2.no_of_single_rooms = 10;
     h2.no_of_double_rooms = 5;
@@ -72,7 +100,7 @@ int main(){
     h3.name = "Paradise   "; //11
     h3.no_of_rooms = 20;
     h3.location = "Cottbus";
-    h3.price = 80.00;
+    h3.price = 80;
     h3.rating = 5;
     h3.no_of_single_rooms = 10;
     h3.no_of_double_rooms = 5;
@@ -87,7 +115,7 @@ int main(){
     h4.name = "Heaven     "; //11
     h4.no_of_rooms = 35;
     h4.location = "Hamburg"; //7
-    h4.price = 50.00;
+    h4.price = 50;
     h4.rating = 4.5;
     h4.no_of_single_rooms = 15;
     h4.no_of_double_rooms = 10;
@@ -102,7 +130,7 @@ int main(){
     h5.name = "Comfort    "; //11
     h5.no_of_rooms = 20;
     h5.location = "Leipzig";
-    h5.price = 75.00;
+    h5.price = 75;
     h5.rating = 5;
     h5.no_of_single_rooms = 10;
     h5.no_of_double_rooms = 5;
@@ -129,6 +157,7 @@ int main(){
             cout << "Here is your hotel in Berlin!" << endl;
             cout << "     " << endl;
             h2.hotel_info();
+            h2.payment_calculation();
         }
         
         else  if(location == "Potsdam"){
@@ -137,6 +166,7 @@ int main(){
             cout << "Here is your hotel in Potsdam!" << endl;
             cout << "     " << endl;
             h1.hotel_info();
+            h1.payment_calculation();
         }
         
         else  if(location == "Hamburg"){
@@ -145,6 +175,7 @@ int main(){
             cout << "Here is your hotel in Hamburg!" << endl;
             cout << "     " << endl;
             h4.hotel_info();
+            h4.payment_calculation();
         }
         
         else if(location == "Cottbus"){
@@ -153,6 +184,7 @@ int main(){
             cout << "Here is your hotel in Cottbus!" << endl;
             cout << "     " << endl;
             h3.hotel_info();
+            h3.payment_calculation();
         }
         
         else if(location == "Leipzig"){
@@ -161,6 +193,7 @@ int main(){
             cout << "Here is your hotel in Leipzig!" << endl;
             cout << "     " << endl;
             h5.hotel_info();
+            h5.payment_calculation();
         }
         
         else{
